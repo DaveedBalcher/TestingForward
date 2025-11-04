@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>FAQ | Testing Forward</title>
     <style>
         * {
@@ -32,6 +32,7 @@
             top: 0;
             z-index: 100;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            touch-action: manipulation;
         }
 
         nav .container {
@@ -57,6 +58,7 @@
             color: white;
             text-decoration: none;
             transition: opacity 0.2s;
+            touch-action: manipulation;
         }
 
         nav a:hover {
@@ -147,6 +149,7 @@
             font-size: 1.1rem;
             transition: transform 0.2s, box-shadow 0.2s;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            touch-action: manipulation;
         }
 
         .cta-button:hover {
@@ -180,6 +183,7 @@
             font-size: 1.5rem;
             cursor: pointer;
             padding: 5px;
+            touch-action: manipulation;
         }
 
         /* Responsive */
@@ -346,7 +350,7 @@
 
             <div class="faq-item">
                 <h3>Can you work with our existing test framework?</h3>
-                <p>Yes. I'll use whatever testing framework you're already using (XCTest for iOS, JUnit/Espresso for Android, Jest/React Testing Library for web). If you don't have one yet, I'll recommend industry-standard options and explain the trade-offs.</p>
+                <p>Yes. I'll use whatever testing framework you're already using (XCTest, SwiftTesting for iOS, JUnit/Espresso for Android, Jest/React Testing Library for web). If you don't have one yet, I'll recommend industry-standard options and explain the trade-offs.</p>
             </div>
 
             <div class="faq-item">
@@ -372,11 +376,6 @@
             <div class="faq-item">
                 <h3>What about the AI stuff you mentioned?</h3>
                 <p>I'm researching how AI could eventually automate the analysis I do manually—mapping user scenarios to test coverage at scale. But that's separate from this engagement. You're getting proven hands-on consulting now. If I develop tools based on this research, you'd have early access as a founding partner. Your value is guaranteed regardless of whether that materializes.</p>
-            </div>
-
-            <div class="faq-item">
-                <h3>Why only 1-2 founding partners?</h3>
-                <p>I want to give these initial engagements my complete focus and use the learnings to refine my approach before scaling up. After these first clients, I'll raise pricing and potentially adjust the offering based on what I learn. This is your chance to get premium work at a significant discount.</p>
             </div>
 
             <div class="faq-item">

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Testing Forward | Mobile & Web Testing Consulting</title>
     <style>
         * {
@@ -32,6 +32,7 @@
             top: 0;
             z-index: 100;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            touch-action: manipulation;
         }
 
         nav .container {
@@ -56,6 +57,7 @@
             color: white;
             text-decoration: none;
             transition: opacity 0.2s;
+            touch-action: manipulation;
         }
 
         nav a:hover {
@@ -94,6 +96,7 @@
             transition: transform 0.2s, box-shadow 0.2s;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
             margin: 10px;
+            touch-action: manipulation;
         }
 
         .cta-button:hover {
@@ -344,6 +347,7 @@
             font-size: 1.5rem;
             cursor: pointer;
             padding: 5px;
+            touch-action: manipulation;
         }
 
         /* Responsive */
@@ -658,7 +662,7 @@
                         <li>10+ years building iOS, Android, and React applications</li>
                         <li>Led quality initiatives for teams of 10-50 engineers</li>
                         <li>Architected testing strategies that balance comprehensive coverage with maintainability</li>
-                        <li>Expert in XCTest, JUnit/Espresso, Jest, and React Testing Library</li>
+                        <li>Expert in XCTest, SwiftTesting, JUnit/Espresso, Jest, and React Testing Library</li>
                         <li>Focus on pragmatic testing: right tests, right places, maintainable long-term</li>
                     </ul>
 
