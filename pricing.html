@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Pricing | Testing Forward</title>
     <style>
         * {
@@ -32,6 +32,7 @@
             top: 0;
             z-index: 100;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            touch-action: manipulation;
         }
 
         nav .container {
@@ -57,6 +58,7 @@
             color: white;
             text-decoration: none;
             transition: opacity 0.2s;
+            touch-action: manipulation;
         }
 
         nav a:hover {
@@ -261,6 +263,7 @@
             font-size: 1rem;
             transition: all 0.3s;
             margin: 25px 0 20px 0;
+            touch-action: manipulation;
         }
 
         .select-button:hover {
@@ -391,6 +394,7 @@
             transition: transform 0.2s, box-shadow 0.2s;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
             margin-top: 20px;
+            touch-action: manipulation;
         }
 
         .cta-button:hover {
@@ -448,6 +452,7 @@
             font-size: 1.5rem;
             cursor: pointer;
             padding: 5px;
+            touch-action: manipulation;
         }
 
         /* Responsive */
