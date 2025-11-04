@@ -171,19 +171,134 @@
             text-decoration: underline;
         }
 
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 5px;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
+            nav .container {
+                flex-wrap: wrap;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
             nav ul {
-                gap: 15px;
-                font-size: 0.9rem;
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                gap: 0;
+                padding: 15px 0 5px 0;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav ul li {
+                width: 100%;
+                text-align: center;
+                padding: 10px 0;
+                border-top: 1px solid rgba(255,255,255,0.1);
+            }
+
+            .page-header {
+                padding: 50px 20px;
             }
 
             .page-header h1 {
                 font-size: 2rem;
             }
 
+            .page-header p {
+                font-size: 1.1rem;
+            }
+
+            section {
+                padding: 60px 20px;
+            }
+
+            .faq-item {
+                padding: 20px;
+            }
+
+            .faq-item h3 {
+                font-size: 1.2rem;
+            }
+
+            .faq-item p {
+                font-size: 0.95rem;
+            }
+
+            .cta-section {
+                padding: 60px 20px;
+            }
+
             .cta-section h2 {
-                font-size: 2rem;
+                font-size: 1.8rem;
+            }
+
+            .cta-section p {
+                font-size: 1.1rem;
+            }
+
+            .cta-button {
+                padding: 12px 30px;
+                font-size: 1rem;
+                display: block;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav .logo {
+                font-size: 1rem;
+            }
+
+            .page-header h1 {
+                font-size: 1.75rem;
+            }
+
+            .page-header p {
+                font-size: 1rem;
+            }
+
+            .faq-item {
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+
+            .faq-item h3 {
+                font-size: 1.1rem;
+                margin-bottom: 12px;
+            }
+
+            .faq-item p {
+                font-size: 0.9rem;
+                line-height: 1.6;
+            }
+
+            .cta-section h2 {
+                font-size: 1.6rem;
+            }
+
+            .cta-section p {
+                font-size: 1rem;
+            }
+
+            .cta-button {
+                padding: 10px 25px;
+                font-size: 0.95rem;
             }
         }
     </style>
@@ -193,6 +308,9 @@
     <nav>
         <div class="container">
             <a href="index.html" class="logo">Testing Forward</a>
+            <button class="menu-toggle" onclick="this.nextElementSibling.classList.toggle('active')" aria-label="Toggle menu">
+                ☰
+            </button>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
