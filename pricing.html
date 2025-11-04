@@ -439,27 +439,82 @@
             text-decoration: underline;
         }
 
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 5px;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
+            nav .container {
+                flex-wrap: wrap;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
             nav ul {
-                gap: 15px;
-                font-size: 0.9rem;
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                gap: 0;
+                padding: 15px 0 5px 0;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav ul li {
+                width: 100%;
+                text-align: center;
+                padding: 10px 0;
+                border-top: 1px solid rgba(255,255,255,0.1);
+            }
+
+            .page-header {
+                padding: 50px 20px;
             }
 
             .page-header h1 {
                 font-size: 2rem;
             }
 
+            .page-header p {
+                font-size: 1.1rem;
+            }
+
             h2 {
-                font-size: 2rem;
+                font-size: 1.8rem;
+            }
+
+            .section-intro {
+                font-size: 1.1rem;
+            }
+
+            section {
+                padding: 60px 20px;
             }
 
             .pricing-cards {
                 grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .pricing-card {
+                padding: 30px 20px;
             }
 
             .pricing-card.featured {
                 transform: scale(1);
+                border: 2px solid #667eea;
             }
 
             .pricing-card.featured:hover {
@@ -473,6 +528,156 @@
             .card-header h3 {
                 font-size: 1.5rem;
             }
+
+            .features li {
+                font-size: 0.95rem;
+                padding: 10px 0;
+            }
+
+            .select-button {
+                padding: 12px 25px;
+                font-size: 0.95rem;
+            }
+
+            .upgrade-note {
+                padding: 25px 20px;
+                margin: 60px auto;
+            }
+
+            .upgrade-note h3 {
+                font-size: 1.3rem;
+            }
+
+            .upgrade-note p {
+                font-size: 1rem;
+            }
+
+            .pricing-details h3 {
+                font-size: 1.5rem;
+            }
+
+            .pricing-table {
+                margin: 30px auto;
+            }
+
+            table {
+                font-size: 0.9rem;
+            }
+
+            th, td {
+                padding: 12px 10px;
+            }
+
+            .cta-section {
+                padding: 60px 20px;
+            }
+
+            .cta-section h2 {
+                font-size: 1.8rem;
+            }
+
+            .cta-section p {
+                font-size: 1.1rem;
+            }
+
+            .cta-button {
+                padding: 12px 30px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav .logo {
+                font-size: 1rem;
+            }
+
+            .page-header h1 {
+                font-size: 1.75rem;
+            }
+
+            .page-header p {
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            .section-intro {
+                font-size: 1rem;
+            }
+
+            .pricing-card {
+                padding: 25px 15px;
+            }
+
+            .card-header h3 {
+                font-size: 1.3rem;
+            }
+
+            .price .amount {
+                font-size: 2rem;
+            }
+
+            .price .from {
+                font-size: 0.8rem;
+            }
+
+            .price-note {
+                font-size: 0.85rem;
+            }
+
+            .features li {
+                font-size: 0.9rem;
+                padding: 8px 0;
+                gap: 8px;
+            }
+
+            .features .check, .features .cross {
+                font-size: 1rem;
+            }
+
+            .timeline-badge span {
+                font-size: 0.85rem;
+                padding: 6px 15px;
+            }
+
+            .select-button {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+
+            .best-for {
+                font-size: 0.85rem;
+            }
+
+            .upgrade-note {
+                padding: 20px 15px;
+            }
+
+            .upgrade-note h3 {
+                font-size: 1.2rem;
+            }
+
+            .upgrade-note p {
+                font-size: 0.95rem;
+            }
+
+            .cta-section h2 {
+                font-size: 1.6rem;
+            }
+
+            .cta-section p {
+                font-size: 1rem;
+            }
+
+            table {
+                font-size: 0.85rem;
+            }
+
+            th, td {
+                padding: 10px 8px;
+            }
         }
     </style>
 </head>
@@ -481,6 +686,9 @@
     <nav>
         <div class="container">
             <a href="index.html" class="logo">Testing Forward</a>
+            <button class="menu-toggle" onclick="this.nextElementSibling.classList.toggle('active')" aria-label="Toggle menu">
+                ☰
+            </button>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
@@ -503,10 +711,10 @@
             <p class="section-intro">Get the analysis you need to move forward with confidence</p>
             
             <div class="pricing-cards">
-                <!-- Discovery Package -->
+                <!-- Diagnosis Package -->
                 <div class="pricing-card">
                     <div class="card-header">
-                        <h3>Discovery Analysis</h3>
+                        <h3>Diagnosis</h3>
                         <p class="description">Validate the problem and ROI</p>
                     </div>
                     
@@ -577,7 +785,7 @@
 
             <div class="upgrade-note">
                 <h3>💡 Flexible Options</h3>
-                <p>Start with Discovery and upgrade to the Full Package within 30 days.<br>Your Discovery fee will be fully credited toward the Full Package price.</p>
+                <p>Start with Diagnosis and upgrade to the Full Package within 30 days.<br>Your Diagnosis fee will be fully credited toward the Full Package price.</p>
             </div>
         </div>
     </section>
